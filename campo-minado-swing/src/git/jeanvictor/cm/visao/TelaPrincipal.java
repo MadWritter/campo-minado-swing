@@ -19,16 +19,4 @@ public class TelaPrincipal extends JFrame{
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setVisible(true);
 	}
-	
-	public static void main(String[] args) {
-		String resposta = JOptionPane.
-				showInputDialog("Quantas Bombas deseja?\n30(easy) 50(mid) 70(hard)");
-		int dificuldade = 0;
-		try {
-			dificuldade = Integer.parseInt(resposta);
-			new TelaPrincipal(dificuldade);
-		} catch (NumberFormatException e) {
-			JOptionPane.showConfirmDialog(null, "Valor inserido incorreto\nEncerrando...", null, JOptionPane.DEFAULT_OPTION);
-		}
-	}
 }
